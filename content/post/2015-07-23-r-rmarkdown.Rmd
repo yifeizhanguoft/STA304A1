@@ -1,0 +1,87 @@
+---
+title: "Bicycle thefts in Toronto"
+author: "Yifei Zhang"
+date: 2020-09-27
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# Abstraction
+Since bicycles entered the human history, they have been helping improve human 
+beings' lives in many aspects. They offer a cheaper, healthier way for 
+people to travel around the city and provides a solution to better environments.
+Therefore, It is very necessary to understand which part of the city has 
+occurred more bicycle thefts and we need to be careful when entering these areas
+so as to reduce the chances of getting our friend stolen.
+
+# Introduction
+As people have noticed, bicycles are playing a very important role in our lives.
+We use them for commuting, cardio exercising and even sightseeing. Therefore, it
+is necessary to protect our bicycles from incidents like being stolen. Besides 
+physical protection like stronger bicycle locks, I feel like we need to know a 
+little knowledge about which areas of the city that bicycles are more likely to 
+be stolen so as we should be more cautious when entering these areas.
+
+To start with, I use a data set called "Bicycle Thefts" from the open data 
+portal of Toronto to help with my study. This data set records information of 
+all the bicycle thefts reported from year 2014 to 2019. Since I am more 
+interested in the areas where the thefts occur, I choose to make a bar plot 
+with information under "Division" section. It is surprising that there were more
+bicycle theft events happening in division 14, 51 and 52, with nearly 4000 
+counts respectively. By checking the "Toronto Police Service" website, I figure
+out that these three divisions cover almost the entire downtown area of Toronto,
+which means we should always be more careful when leaving our bicycles 
+alone in downtown area. Also, I plot the bar plot of the colors of the stolen 
+bikes to see if there is a relation. The result shows there are several colors 
+which appear way more often than others, which means there is a relation between
+stolen bikes and their colors.
+
+In general, in order to protect our bicycles better, we should always be careful
+when leaving them in downtown area, even for a short amount of time as less than
+10 percent of these stolen bicycles have been recovered according to the police.
+The weakness of this study is that there may be bicycle thefts not reported to
+the police or people may not inform the police whether they find their bicycle, 
+which leads to an influence on accuracy of the data. In the future, people 
+should look after their bikes better with stronger protections since bicycles
+improve our life qualities.
+
+I obtain the graphs with following codes in RStudio Cloud. However, I am not 
+able to knit it to PDF because there is error showing up. I cannot figure out
+why. Thus, I cannot show the graph since Rstudio seems not to allow 
+inserting graphs or screenshots directly. But I copy and paste the codes below 
+to prove what I am trying to do.
+
+#Codes
+
+install.packages("opendatatoronto")
+install.packages("tidyverse")
+library(opendatatoronto)
+library(tidyverse)
+list_packages()
+
+bicycle_thefts_packages <- search_packages("bicycle thefts")
+bicycle_thefts_resources <- bicycle_thefts_packages %>% list_package_resources()
+bicycle_thefts_resources
+
+bicycle_thefts_statistic <- bicycle_thefts_resources %>% get_resource()
+bicycle_thefts_statistic
+
+bicycle_thefts_statistic %>% ggplot(aes(x= Division))+geom_bar()
+bicycle_thefts_statistic %>% ggplot(aes(x=Status))+geom_bar()
+bicycle_thefts_statistic %>% ggplot(aes(x=Bike_Colour))+geom_bar()
+
+
+#References:
+- R Core Team (2020). R: A language and environment for statistical computing. R
+  Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+- Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software,
+  4(43), 1686, https://doi.org/10.21105/joss.01686
+- Toronto Police Services (Analytics.Innovation@torontopolice.on.ca)
+- http://www.torontopolice.on.ca/divisions/map.php
+
+
+

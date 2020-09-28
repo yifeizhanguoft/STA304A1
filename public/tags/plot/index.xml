@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plot on Bicycle thefts in Toronto</title>
+    <link>/tags/plot/</link>
+    <description>Recent content in plot on Bicycle thefts in Toronto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bicycle thefts in Toronto</title>
+      <link>/2020/09/27/bicycle-thefts-in-toronto/</link>
+      <pubDate>Sun, 27 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/09/27/bicycle-thefts-in-toronto/</guid>
+      <description>Abstraction Since bicycles entered the human history, they have been helping improve human beings’ lives in many aspects. They offer a cheaper, healthier way for people to travel around the city and provides a solution to better environments. Therefore, It is very necessary to understand which part of the city has occurred more bicycle thefts and we need to be careful when entering these areas so as to reduce the chances of getting our friend stolen.</description>
+    </item>
+    
+  </channel>
+</rss>
